@@ -14,8 +14,13 @@ First, ensure you have the following installed:
 
 
 Move
-- vulkan1.lib
+- vulkan\ headers folder
 - GLFW\ headers folder
+
+to C:\msys64\mingw64\include.
+
+Move
+- vulkan1.lib
 - libglfw3.a
 
 to C:\msys64\mingw64\lib.
