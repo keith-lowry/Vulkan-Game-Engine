@@ -14,7 +14,8 @@ First, ensure you have the following installed:
 
 
 Move
-- vulkan\ headers folder
+- vulkan\ Vulkan headers folder
+- vk_video\ Vulkan headers folder
 - GLFW\ headers folder
 
 to C:\msys64\mingw64\include.
