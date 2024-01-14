@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/thinkpad-x1/Documents/VSCode Projects/C++/Vulkan Graphics API/src
+# Install script for directory: C:/Users/Keith Lowry/Documents/VSCode Projects/C++/Vulkan-Game-Engine/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/thinkpad-x1/Documents/VSCode Projects/C++/Vulkan Graphics API/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Keith Lowry/Documents/VSCode Projects/C++/Vulkan-Game-Engine/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
