@@ -23,3 +23,5 @@ Run "make" in your choice of shell in the base directory.
 
 # To Run
 Execute "LearnVulkan.exe" in the build\ directory.
+
+You should not need any extra .dlls.
