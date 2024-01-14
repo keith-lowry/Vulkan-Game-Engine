@@ -4,7 +4,7 @@ Currently just opens a blank window.
 
 Written in C++ for Windows x64.
 
-# To Compile
+# To Compile with MinGW-w64
 First, ensure you have the following installed:
 - MinGW
 - CMake
@@ -14,9 +14,15 @@ First, ensure you have the following installed:
 
 
 Move
-- vulkan1.lib
+- vulkan\ Vulkan headers folder
+- vk_video\ Vulkan headers folder
 - GLFW\ headers folder
-- libglfw3.a
+
+to C:\msys64\mingw64\include.
+
+Move
+- vulkan1.lib
+- lib-mingw-w64\libglfw3.a
 
 to C:\msys64\mingw64\lib.
 
@@ -25,4 +31,5 @@ Run "make" in your choice of shell in the base directory.
 # To Run
 Execute "LearnVulkan.exe" in the build\ directory.
 
-You should not need any extra .dlls.
+You should not need any extra .dll files, but the executable
+may attempt to read some project files (shaders) present in the src\ directory.
