@@ -1,0 +1,3 @@
+C:/Users/thinkpad-x1/Documents/VSCode Projects/C++/Vulkan Graphics API/build/CMakeFiles/LearnVulkan.dir
+C:/Users/thinkpad-x1/Documents/VSCode Projects/C++/Vulkan Graphics API/build/CMakeFiles/edit_cache.dir
+C:/Users/thinkpad-x1/Documents/VSCode Projects/C++/Vulkan Graphics API/build/CMakeFiles/rebuild_cache.dir
