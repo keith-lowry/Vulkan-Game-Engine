@@ -11,7 +11,7 @@ namespace lve {
     class FirstApp {
         private:
             Window window{WIDTH, HEIGHT, "Hello Vulkan!"};
-            Pipeline pipeline{"..\\src\\shaders\\simple_shader.vert.spv", "..\\src\\shaders\\simple_shader.frag.spv"};
+            Pipeline pipeline{".\\shaders\\simple_shader.vert.spv", ".\\shaders\\simple_shader.frag.spv"};
         public:
             static constexpr int WIDTH = 800;
             static constexpr int HEIGHT = 600;

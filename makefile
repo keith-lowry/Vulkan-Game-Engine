@@ -1,5 +1,10 @@
-default:
-	cmake -G "MinGW Makefiles" -S .\src\ -B .\build\
+SHELL := powershell.exe
+.SHELLFLAGS := -NoProfile -Command
+# Force make to use powershell instead of executing commands directly
 
-# g++ ./main.cpp -l:libglfw3.a -l:vulkan-1.lib -lgdi32 -o out
-# g++ -I C:/Libraries/glfw-3.3.9.bin.WIN64/include -I C:/Libraries/VulkanSDK/1.3.268.0/Include -I C:/Libraries/glm -LC:/Libraries/VulkanSDK/1.3.268.0/Lib/ -LC:/Libraries/glfw-3.3.9.bin.WIN64/lib-mingw-w64 ./main.cpp  -l:libglfw3.a -l:vulkan-1.lib -lgdi32 -o main
+default:
+	.\build.ps1
+
+# cmake -G "MinGW Makefiles" -S .\src -B .\build
+# @.\compile.bat; echo "Compiled shaders to build folder"
+# @cd .\build; make; cd ..\
