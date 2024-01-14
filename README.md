@@ -11,9 +11,12 @@ First, ensure you have the following installed:
 - Latest Vulkan SDK for [Windows](https://vulkan.lunarg.com/sdk/home#windows)
 - 64-bit Windows binaries for [GLFW](https://www.glfw.org/download.html)
 
+
 Move
--
-to C:\msys64\mingw64\bin.
+- vulkan1.lib
+- GLFW\ headers folder
+- libglfw3.a
+to C:\msys64\mingw64\lib.
 
 Run "make" in your choice of shell in the base directory.
 
