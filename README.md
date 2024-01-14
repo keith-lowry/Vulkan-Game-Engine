@@ -4,7 +4,7 @@ Currently just opens a blank window.
 
 Written in C++ for Windows x64.
 
-# To Compile
+# To Compile with MinGW-w64
 First, ensure you have the following installed:
 - MinGW
 - CMake
@@ -22,7 +22,7 @@ to C:\msys64\mingw64\include.
 
 Move
 - vulkan1.lib
-- libglfw3.a
+- lib-mingw-w64\libglfw3.a
 
 to C:\msys64\mingw64\lib.
 
