@@ -1,3 +1,0 @@
-C:/Users/Keith Lowry/Documents/VSCode Projects/C++/Vulkan-Game-Engine/build/CMakeFiles/LearnVulkan.dir
-C:/Users/Keith Lowry/Documents/VSCode Projects/C++/Vulkan-Game-Engine/build/CMakeFiles/edit_cache.dir
-C:/Users/Keith Lowry/Documents/VSCode Projects/C++/Vulkan-Game-Engine/build/CMakeFiles/rebuild_cache.dir
