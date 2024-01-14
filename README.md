@@ -26,10 +26,10 @@ Move
 
 to C:\msys64\mingw64\lib.
 
-Run "make" in your choice of shell in the base directory.
+Run the "build.ps1" powershell script.
 
 # To Run
 Execute "LearnVulkan.exe" in the build\ directory.
 
 You should not need any extra .dll files, but the executable
-may attempt to read some project files (shaders) present in the src\ directory.
+may read shader binaries present in build\shaders.
