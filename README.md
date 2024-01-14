@@ -32,4 +32,4 @@ Run "make" in your choice of shell in the base directory.
 Execute "LearnVulkan.exe" in the build\ directory.
 
 You should not need any extra .dll files, but the executable
-may depend on some project files (shaders) present in the src\ directory.
+may attempt to read some project files (shaders) present in the src\ directory.
