@@ -7,6 +7,15 @@ Written in C++ for Windows x64.
 First, ensure you have the following installed:
 - MinGW
 - CMake
+- make (can be easily installed with the [Chocolatey](https://chocolatey.org/install) package manager)
 - Latest Vulkan SDK for [Windows](https://vulkan.lunarg.com/sdk/home#windows)
 - 64-bit Windows binaries for [GLFW](https://www.glfw.org/download.html)
-- 
+
+Move
+-
+to C:\msys64\mingw64\bin.
+
+Run "make" in your choice of shell in the base directory.
+
+# To Run
+Execute "LearnVulkan.exe" in the build\ directory.
