@@ -16,6 +16,7 @@ Move
 - vulkan1.lib
 - GLFW\ headers folder
 - libglfw3.a
+
 to C:\msys64\mingw64\lib.
 
 Run "make" in your choice of shell in the base directory.
