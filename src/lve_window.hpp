@@ -5,6 +5,7 @@
 #include <string>
 
 namespace lve {
+    // Class representing a single open GLFW window.
     class Window {
         private:
             /**

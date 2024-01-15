@@ -16,11 +16,11 @@ namespace lve {
             throw std::runtime_error("Failed to open file: " + filepath);
         }
 
-        size_t fileSize = static_cast<size_t>(file.tellg()); // get file size (last position)
+        size_t fileSize = static_cast<size_t>(file.tellg()); // get file size (current position)
         std::vector<char> buffer(fileSize);
         
-        file.seekg(0);
-        file.read(buffer.data(), fileSize);
+        file.seekg(0); // go to start of file
+        file.read(buffer.data(), fileSize); // read entirety of file into our vector
         file.close();
         return buffer;
     }

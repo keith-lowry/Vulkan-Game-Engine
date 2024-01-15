@@ -5,8 +5,8 @@
 
 namespace lve {
     /**
-     * @brief First application using our window class.
-     * 
+     * @brief First application using our Window and
+     * Pipeline classes.
      */
     class FirstApp {
         private:
