@@ -1,6 +1,8 @@
 # Summary
 In progress small Vulkan game engine built following an online tutorial by [Brendan Galea](https://www.youtube.com/watch?v=lr93-_cC8v4).
-Currently just opens a blank window.
+
+Currently just opens a blank window and prints the size of two basic
+shader files.
 
 Written in C++ for Windows x64.
 
@@ -25,6 +27,10 @@ Move
 - lib-mingw-w64\libglfw3.a
 
 to C:\msys64\mingw64\lib.
+
+Add the Vulkan SDK's Bin\ folder to your PATH. 
+This ensures the build script can \
+execute glslc.exe to compile the shader files.
 
 Run the "build.ps1" powershell script.
 

@@ -15,10 +15,10 @@ foreach ($name in $shaders) {
 Write-Host "-- Shader binaries written to: $buildFolder\shaders"
 
 Write-Host "$pre Running CMake..."
-cmake -G "MinGW Makefiles" -S $srcFolder -B $buildFolder
+cmake.exe -G "MinGW Makefiles" -S $srcFolder -B $buildFolder
 
 Write-Host "$pre Compiling Binary... "
-cd .\build
-make
-cd ..\
+Set-Location .\build
+make.exe
+Set-Location ..\
 Write-Host "$pre Done!"
