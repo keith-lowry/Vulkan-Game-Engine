@@ -2,6 +2,7 @@
 
 #include "lve_window.hpp"
 #include "lve_pipeline.hpp"
+#include "lve_device.hpp"
 
 namespace lve {
     /**
@@ -11,7 +12,8 @@ namespace lve {
     class FirstApp {
         private:
             Window window{WIDTH, HEIGHT, "Hello Vulkan!"};
-            Pipeline pipeline{".\\shaders\\simple_shader.vert.spv", ".\\shaders\\simple_shader.frag.spv"};
+            Device device{window};
+            Pipeline pipeline{device, ".\\shaders\\simple_shader.vert.spv", ".\\shaders\\simple_shader.frag.spv", Pipeline::defaultPipelineConfigInfo(WIDTH, HEIGHT)};
         public:
             static constexpr int WIDTH = 800;
             static constexpr int HEIGHT = 600;

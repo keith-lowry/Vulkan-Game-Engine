@@ -32,6 +32,8 @@ namespace lve {
             /// @return True if the user attempted to close the Window.
             bool shouldClose() { return glfwWindowShouldClose(window);}
 
+            void createWindowSurface(VkInstance instance, VkSurfaceKHR *surface);
+
             // avoid having two Windows sharing the same pointer
             Window(const Window &) = delete; // delete copy constructor
             Window &operator=(const Window &) = delete; // delete copy operator

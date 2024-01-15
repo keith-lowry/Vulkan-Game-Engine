@@ -1,11 +1,44 @@
 #pragma once
 
+#include "lve_device.hpp"
 #include <string>
 #include <vector>
 
 namespace lve {
+    // Useful for letting application code be able to
+    // configure a pipeline and share configurations among
+    // multiple pipelines.
+    struct PipelineConfigInfo {};
+
     // Class representing a Vulkan rendering Pipeline.
     class Pipeline {
+        private:
+            /**
+             * @brief Reads the entirety of a file into a vector buffer
+             * and returns it.
+             * 
+             * @param filepath Path to file to read.
+             * @return std::vector<char> Buffer containing the file's contents.
+             */
+            static std::vector<char> readFile(const std::string& filepath);
+
+            void createGraphicsPipeline(
+                const std::string& vertFilePath, 
+                const std::string& fragFilePath,
+                const PipelineConfigInfo& configInfo);
+
+            void createShaderModule(const std::vector<char>& code, VkShaderModule* shaderModule);
+
+            // Reference to our Device object.
+            Device& device;
+            // ^ Potentially memory unsafe if Device is released BUT
+            // we assume that the Device will outlive any Pipeline
+            // objects (Pipelines fundamentally need a Device to exist).
+
+            // Handle to Vulkan Pipeline object.
+            VkPipeline graphicsPipeline;
+            VkShaderModule vertShaderModule;
+            VkShaderModule fragShaderModule;
         public:
             /**
              * @brief Construct a new Pipeline object.
@@ -13,17 +46,21 @@ namespace lve {
              * @param vertFilePath Path to vertex shader file.
              * @param fragFilePath Path to fragment shader file.
              */
-            Pipeline(const std::string& vertFilePath, const std::string& fragFilePath);
-        private:
+            Pipeline(
+                Device& device, 
+                const std::string& vertFilePath, 
+                const std::string& fragFilePath, 
+                const PipelineConfigInfo& configInfo);
+            
             /**
-             * @brief Read the entirety of a file into a vector buffer
-             * and return it.
-             * 
-             * @param filepath Path to file to read.
-             * @return std::vector<char> Buffer containing the file's contents.
+             * @brief Destroy the Pipeline object.
              */
-            static std::vector<char> readFile(const std::string& filepath);
-            void createGraphicsPipeline(const std::string& vertFilePath, const std::string& fragFilePath);
+            ~Pipeline() {};
 
+            // Delete copy constructor and operator.
+            Pipeline(const Pipeline&) = delete;
+            void operator=(const Pipeline&) = delete;
+
+            static PipelineConfigInfo defaultPipelineConfigInfo(uint32_t width, uint32_t height);
     };
 }

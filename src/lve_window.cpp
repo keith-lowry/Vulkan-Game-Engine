@@ -1,4 +1,5 @@
 #include "lve_window.hpp"
+#include <stdexcept>
 
 namespace lve {
     Window::Window(int w, int h, std::string name) : width{w}, height{h}, windowName{name} {
@@ -17,5 +18,11 @@ namespace lve {
 
         window = glfwCreateWindow(width, height, windowName.c_str(), nullptr, nullptr);
         // c_str(): pass a null-terminated c-style string to function
+    }
+
+    void Window::createWindowSurface(VkInstance instance, VkSurfaceKHR *surface) {
+        if (glfwCreateWindowSurface(instance, window, nullptr, surface) != VK_SUCCESS) {
+            throw std::runtime_error("Failed to create a window surface");
+        }
     }
 }
