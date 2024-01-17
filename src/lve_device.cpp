@@ -9,6 +9,8 @@
 #include <set>
 #include <unordered_set>
 
+// authored by Brendan Galea
+
 namespace lve {
 
 // local callback functions

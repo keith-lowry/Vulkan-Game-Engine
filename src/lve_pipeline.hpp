@@ -8,7 +8,20 @@ namespace lve {
     // Useful for letting application code be able to
     // configure a pipeline and share configurations among
     // multiple pipelines.
-    struct PipelineConfigInfo {};
+    struct PipelineConfigInfo {
+        VkViewport viewport;
+        VkRect2D scissor;
+        VkPipelineViewportStateCreateInfo viewportInfo;
+        VkPipelineInputAssemblyStateCreateInfo inputAssemblyInfo;
+        VkPipelineRasterizationStateCreateInfo rasterizationInfo;
+        VkPipelineMultisampleStateCreateInfo multisampleInfo;
+        VkPipelineColorBlendAttachmentState colorBlendAttachment;
+        VkPipelineColorBlendStateCreateInfo colorBlendInfo;
+        VkPipelineDepthStencilStateCreateInfo depthStencilInfo;
+        VkPipelineLayout pipelineLayout = nullptr;
+        VkRenderPass renderPass = nullptr;
+        uint32_t subpass = 0;
+    };
 
     // Class representing a Vulkan rendering Pipeline.
     class Pipeline {
@@ -61,6 +74,13 @@ namespace lve {
             Pipeline(const Pipeline&) = delete;
             void operator=(const Pipeline&) = delete;
 
+            /**
+             * @brief Get default Pipeline configuration.
+             * 
+             * @param width Width of viewport
+             * @param height Height of viewport
+             * @return PipelineConfigInfo 
+             */
             static PipelineConfigInfo defaultPipelineConfigInfo(uint32_t width, uint32_t height);
     };
 }
